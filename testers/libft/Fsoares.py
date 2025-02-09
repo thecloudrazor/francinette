@@ -4,7 +4,7 @@ import re
 import shutil
 import subprocess
 from pathlib import Path
-from pipes import quote
+from shlex import quote
 from tempfile import tempdir
 from typing import Set
 
