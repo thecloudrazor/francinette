@@ -7,7 +7,7 @@ import string
 import subprocess
 import threading
 from itertools import takewhile
-from pipes import quote
+from shlex import quote
 from time import sleep
 
 from halo import Halo
