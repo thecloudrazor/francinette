@@ -29,12 +29,12 @@ if [ "$(uname)" != "Darwin" ]; then
 			;;
 		"Fedora")
 			sudo dnf group install "development-tools" -y
-			sudo dnf install gcc clang *libbsd* *valgrind* libyui-ncurses-* gcc-c++ ncurses* pip pipx git wget curl libxkbcommon-devel libxkbcommon-utils libxkbcommon-x11-devel libxkbcommon-x11-utils libxkbfile-devel python3-xkbcommon python3-xkbregistry xkb-switch xkbcomp-devel xkbset *libXi-devel* mesa-libGLU mesa-libGLU-devel xcb-* libXcursor-devel xcb-util-cursor-devel libxcb-devel
+			sudo dnf install gcc clang *libbsd* *valgrind* libyui-ncurses-* gcc-c++ ncurses* pip pipx git wget curl libxkbcommon-devel libxkbcommon-utils libxkbcommon-x11-devel libxkbcommon-x11-utils libxkbfile-devel python3-xkbcommon python3-xkbregistry xkb-switch xkbcomp-devel xkbset *libXi-devel* mesa-libGLU mesa-libGLU-devel xcb-* libXcursor-devel xcb-util-cursor-devel libxcb-devel -y
    			pip3 install wheel
 			;;
 		"NobaraLinux")
 			sudo dnf group install "development-tools" -y
-			sudo dnf install gcc clang *libbsd* *valgrind* libyui-ncurses-* gcc-c++ ncurses* pip pipx git wget curl libxkbcommon-devel libxkbcommon-utils libxkbcommon-x11-devel libxkbcommon-x11-utils libxkbfile-devel python3-xkbcommon python3-xkbregistry xkb-switch xkbcomp-devel xkbset *libXi-devel* mesa-libGLU mesa-libGLU-devel xcb-* libXcursor-devel xcb-util-cursor-devel libxcb-devel
+			sudo dnf install gcc clang *libbsd* *valgrind* libyui-ncurses-* gcc-c++ ncurses* pip pipx git wget curl libxkbcommon-devel libxkbcommon-utils libxkbcommon-x11-devel libxkbcommon-x11-utils libxkbfile-devel python3-xkbcommon python3-xkbregistry xkb-switch xkbcomp-devel xkbset *libXi-devel* mesa-libGLU mesa-libGLU-devel xcb-* libXcursor-devel xcb-util-cursor-devel libxcb-devel -y
 			pip3 install wheel
 			;;
 	esac
