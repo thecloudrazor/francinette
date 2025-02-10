@@ -4,7 +4,7 @@ import re
 import shutil
 import time
 from dataclasses import dataclass
-from pipes import quote
+from shlex import quote
 from subprocess import CompletedProcess, TimeoutExpired, run
 from typing import List
 
