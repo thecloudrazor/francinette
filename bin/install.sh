@@ -10,7 +10,10 @@ rm -rf francinette
 # download github
 git clone --recursive https://github.com/thecloudrazor/francinette.git
 
-if [ "$(uname)" != "Darwin" ]; then
+read -p "Are you logged in on one of 42 Istanbul campus computers? (y/n): " answer
+
+if [ "$answer" == "n" ]; then
+	if [ "$(uname)" != "Darwin" ]; then
 	echo "Admin permissions needed to install C compilers, python, and upgrade current packages"
 	case $(lsb_release -is) in
 		"Ubuntu")
@@ -38,6 +41,9 @@ if [ "$(uname)" != "Darwin" ]; then
 			pip3 install wheel
 			;;
 	esac
+	fi
+else
+	echo "OK, welcome. Continuing..."
 fi
 
 cp -r francinette "$HOME"
@@ -49,17 +55,28 @@ cd "$HOME"/francinette || exit
 
 # start a venv inside francinette
 if ! python3 -m venv venv ; then
-	echo "Please make sure than you can create a python virtual environment"
-	echo 'Contact me if you have no idea how to proceed (fsoares- on slack)'
+	echo "Please make sure that you are able to create a Python virtual environment."
+	echo 'Contact me if you have no idea how to proceed (thecloudrazor- on Slack)'
 	exit 1
 fi
 
 # activate venv
 . venv/bin/activate
 
+# manually install pip
+if [ "$answer" == "y" ]; then
+	echo "Bootstrapping pip manually..."
+	curl -sS https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+	if ! python get-pip.py; then
+  		echo "Manual pip installation failed. Contact me if you have no idea how to proceed (thecloudrazor- on Slack)"
+  		exit 1
+	fi
+	rm get-pip.py
+fi
+
 # install requirements
 if ! pip3 install -r requirements.txt ; then
-	echo 'Problem launching the installer. Contact me (fsoares- on slack)'
+	echo 'Problem launching the installer. Contact me (thecloudrazor- on Slack)'
 	exit 1
 fi
 
