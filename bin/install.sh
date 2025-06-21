@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 cd "$HOME" || exit
@@ -56,9 +55,9 @@ cd "$HOME"/francinette || exit
 
 # start a venv inside francinette (without pip)
 if ! python3 -m venv venv --without-pip ; then
-    echo "Please make sure that you can create a python virtual environment"
-    echo 'Contact me if you have no idea how to proceed (thecloudrazor- on slack)'
-    exit 1
+	echo "Please make sure that you can create a python virtual environment"
+	echo 'Contact me if you have no idea how to proceed (thecloudrazor- on slack)'
+	exit 1
 fi
 
 # activate venv
@@ -77,30 +76,30 @@ fi
 
 # install requirements
 if ! pip3 install -r requirements.txt ; then
-echo 'Problem launching the installer. Contact me (thecloudrazor- on slack)'
-exit 1
+	echo 'Problem launching the installer. Contact me (thecloudrazor- on Slack)'
+	exit 1
 fi
 
 RC_FILE="$HOME/.zshrc"
 
 if [ "$(uname)" != "Darwin" ]; then
-RC_FILE="$HOME/.bashrc"
-if [[ -f "$HOME/.zshrc" ]]; then
-RC_FILE="$HOME/.zshrc"
-fi
+	RC_FILE="$HOME/.bashrc"
+	if [[ -f "$HOME/.zshrc" ]]; then
+		RC_FILE="$HOME/.zshrc"
+	fi
 fi
 
 echo "try to add alias in file: $RC_FILE"
 
 # set up the alias
 if ! grep "francinette=" "$RC_FILE" &> /dev/null; then
-echo "francinette alias not present"
-printf "\nalias francinette=%s/francinette/tester.sh\n" "$HOME" >> "$RC_FILE"
+	echo "francinette alias not present"
+	printf "\nalias francinette=%s/francinette/tester.sh\n" "$HOME" >> "$RC_FILE"
 fi
 
 if ! grep "paco=" "$RC_FILE" &> /dev/null; then
-echo "Short alias not present. Adding it"
-printf "\nalias paco=%s/francinette/tester.sh\n" "$HOME" >> "$RC_FILE"
+	echo "Short alias not present. Adding it"
+	printf "\nalias paco=%s/francinette/tester.sh\n" "$HOME" >> "$RC_FILE"
 fi
 
 # print help
