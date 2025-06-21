@@ -1,8 +1,12 @@
 #!/bin/bash
 
-if [ "$(uname)" != "Darwin" ]; then
-	echo "Admin permissions need to install newer packages"
-	sudo apt install libbsd-dev libncurses-dev
+read -p "Are you logged in on one of 42 Istanbul campus computers? (y/n): " answer
+
+if [ "$answer" == "n" ]; then
+	if [ "$(uname)" != "Darwin" ]; then
+		echo "Admin permissions need to install newer packages"
+		sudo apt install libbsd-dev libncurses-dev
+	fi
 fi
 
 cd "$HOME"/francinette || exit
@@ -14,10 +18,10 @@ git submodule update --init
 # activate venv
 . venv/bin/activate
 
-echo "Updating python dependencies..."
+echo "Updating Python dependencies..."
 # install requirements
-if ! pip3 install --disable-pip-version-check -q -r requirements.txt ; then
-	echo "Problem updating francinette. Contact me (fsoares- on slack)"
+if ! pip3 install --disable-pip-version-check -r requirements.txt ; then
+	echo "Problem updating francinette. Contact me (thecloudrazor- on slack)"
 	exit 1
 fi
 
