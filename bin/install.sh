@@ -53,10 +53,10 @@ rm -rf temp_____
 
 cd "$HOME"/francinette || exit
 
-# start a venv inside francinette
-if ! python3 -m venv venv ; then
-	echo "Please make sure that you are able to create a Python virtual environment."
-	echo 'Contact me if you have no idea how to proceed (thecloudrazor- on Slack)'
+# start a venv inside francinette (without pip)
+if ! python3 -m venv venv --without-pip ; then
+	echo "Please make sure that you can create a python virtual environment"
+	echo 'Contact me if you have no idea how to proceed (thecloudrazor- on slack)'
 	exit 1
 fi
 
