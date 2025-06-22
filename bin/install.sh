@@ -64,15 +64,13 @@ fi
 . venv/bin/activate
 
 # manually install pip
-if [ "$answer" == "y" ]; then
-	echo "Bootstrapping pip manually..."
-	curl -sS https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-	if ! python get-pip.py; then
-  		echo "Manual pip installation failed. Contact me if you have no idea how to proceed (thecloudrazor- on Slack)"
-  		exit 1
-	fi
-	rm get-pip.py
+echo "Bootstrapping pip manually..."
+curl -sS https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+if ! python get-pip.py; then
+	echo "Manual pip installation failed. Contact me if you have no idea how to proceed (thecloudrazor- on Slack)"
+	exit 1
 fi
+rm get-pip.py
 
 # install requirements
 if ! pip3 install -r requirements.txt ; then
