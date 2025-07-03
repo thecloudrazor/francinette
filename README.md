@@ -6,9 +6,6 @@ Use `francinette` or `paco` inside a project folder to run it.
 
 Currently has tests for: `libft`, `ft_printf`, `get_next_line`, `minitalk` and `pipex`.
 
-`Francinette` is only tested and confirmed to work on MacOS on non ARM chips. Some testers may work on
-Linux and ARM, but I give no guaranties of any test working or even compiling.
-
 ## :exclamation: Important note:
 
 If you have little to no experience programming, I highly highly highly recommend that you write
@@ -43,14 +40,6 @@ You can use it as a local test battery, to test your code.
 
 
 ## Install:
-Francinette has an automatic installer.
-
-Copy the line bellow to your console and execute it. It will automatically download the repo,
-create the necessary folders and alias, and install a python virtual environment dedicated to
-running this tool.
-
-In linux it will also download and install the necessary packages for it to run. It needs
-admin permission to do that.
 
 ```
 bash -c "$(curl -fsSL https://raw.github.com/thecloudrazor/francinette/master/bin/install.sh)"
@@ -60,9 +49,7 @@ The francinette folder will be under your `$HOME` directory (`/Users/<your_usern
 
 
 ## Update:
-Normally francinette will prompt you when there is a new version, and you can then update it.
-
-You can also force it from francinette itself:
+Normally francinette will prompt you when there is a new version, and you can then update it. You can also force it from francinette itself:
 
 ```
 ~ $> francinette -u              # Forces francinette to update
@@ -121,17 +108,9 @@ Log files can be found in: `~/francinette/logs`
 To uninstall `francinette` delete the `francinette` folder. It should be located under your
 `$HOME` directory (`/Users/<your_username>/` or `/home/<your_username>/`)
 
-You also need to remove the automatically created aliases. For that open your `~/.zshrc` 
-file and delete the lines:
-
-```
-alias francinette="$HOME"/francinette/tester.sh
-alias paco="$HOME"/francinette/tester.sh
-```
-
 ## FAQ
 
-If you have any questions you can create an issue or reach me on slack under `fsoares-`
+If you have any questions you can create an issue or reach me on slack under `thecloudrazor`
 
 #### I'm more advanced than the tests you have available. When are you adding more tests?
 
@@ -165,8 +144,8 @@ it gives a Timeout.
 #### I've installed francinette, but when I try to execute it I get the message: `command not found: francinette`
 
 In the install script I try to set two alias to for `francinette`: `francinette` and `paco`. 
-If you are in MacOS I do that by adding two lines to the `.zshrc` file, and to `.bashrc` in 
-linux. If by some chance you are using other shell, or for some other reason it does not work, 
+If you are in MacOS I do that by adding two lines to the `.bashrc` file. 
+If by some chance you are using other shell, or for some other reason it does not work, 
 You can try to set the aliases yourself, by adding:
 
 ```
@@ -178,7 +157,7 @@ Now it should work. If it does not, don't be afraid to contact me.
 
 ## Acknowledgments
 
-* To 42 for providing me this opportunity
+* To [Francisco José Soares Domingues (xicodomingues/fsoares)](https://github.com/xicodomingues) for creating this awesome project
 * To [Tripouille](https://github.com/Tripouille) for [libftTester](https://github.com/Tripouille/libftTester), [gnlTester](https://github.com/Tripouille/gnlTester) and [printfTester](https://github.com/Tripouille/printfTester)
 * To [jtoty](https://github.com/jtoty) and [y3ll0w42](https://github.com/y3ll0w42) for [libft-war-machine](https://github.com/y3ll0w42/libft-war-machine)
 * To [alelievr](https://github.com/alelievr) for [libft-unit-test](https://github.com/alelievr/libft-unit-test) and [printf-unit-test](https://github.com/alelievr/printf-unit-test)
