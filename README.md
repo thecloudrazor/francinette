@@ -1,3 +1,6 @@
+# :exclamation::warning:Write your own tests! It's a very essential part of programming.:warning::exclamation:
+If you have little to no experience programming, I highly highly highly recommend that you write your own tests first. For example, for `ft_split` try to write a main that tests that your code works in most cases. It is also useful to think about corner cases, like what should it return if the string is `""` or `"   "` or `"word"`. Don't rely just on francinette or other tests.
+
 # Francinette
 
 An easy to use testing framework for the 42 projects.
@@ -6,11 +9,6 @@ Use `francinette` or `paco` inside a project folder to run it.
 
 Currently has tests for: `libft`, `ft_printf`, `get_next_line`, `minitalk` and `pipex`.
 
-## :exclamation: Important note:
-
-If you have little to no experience programming, I highly highly highly recommend that you write your own tests first. For example, for `ft_split` try to write a main that tests that your code works in most cases. It is also useful to think about corner cases, like what should it return if the string is `""` or `"   "` or `"word"`. Don't rely just on francinette or other tests.
-
-### :warning: Write your own tests, It's a very essential part of programming. :warning:
 
 ## Table of Contents
 1. [Purpose](#purpose)
