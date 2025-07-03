@@ -1,4 +1,4 @@
-# :exclamation::warning:Write your own tests! It's a very essential part of programming.:warning::exclamation:
+## :exclamation::warning:Write your own tests! It's a very essential part of programming.:warning::exclamation:
 If you have little to no experience programming, I highly highly highly recommend that you write your own tests first. For example, for `ft_split` try to write a main that tests that your code works in most cases. It is also useful to think about corner cases, like what should it return if the string is `""` or `"   "` or `"word"`. Don't rely just on francinette or other tests.
 
 # Francinette
