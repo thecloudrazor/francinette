@@ -1,6 +1,19 @@
 ## :exclamation::warning:Write your own tests! It's a very essential part of programming.:warning::exclamation:
 If you have little to no experience programming, I highly highly highly recommend that you write your own tests first. For example, for `ft_split` try to write a main that tests that your code works in most cases. It is also useful to think about corner cases, like what should it return if the string is `""` or `"   "` or `"word"`. Don't rely just on francinette or other tests.
 
+## Troubleshooting
+
+#### I've installed francinette, but when I try to execute it I get the message: `command not found: francinette`
+
+In the install script I try to set two alias to for `francinette`: `francinette` and `paco`. If you are in Linux I do that by adding two lines to the `.bashrc` file. If by some chance you are using other shell, or for some other reason it does not work, You can try to set the aliases yourself, by adding:
+
+```
+alias francinette="$HOME"/francinette/tester.sh
+alias paco="$HOME"/francinette/tester.sh
+```
+
+Now it should work. If it does not, don't be afraid to contact me.
+
 # Francinette
 
 An easy to use testing framework for the 42 projects.
@@ -106,19 +119,6 @@ This is a way to test if you are protecting your `malloc` calls. This means that
 #### The tester for get_next_line is giving me Timeout errors
 
 This is something that is very common. My tester will get slower for every malloc that you do, so if you do a lot of mallocs it will probably timeout.
-
-## Troubleshooting
-
-#### I've installed francinette, but when I try to execute it I get the message: `command not found: francinette`
-
-In the install script I try to set two alias to for `francinette`: `francinette` and `paco`. If you are in Linux I do that by adding two lines to the `.bashrc` file. If by some chance you are using other shell, or for some other reason it does not work, You can try to set the aliases yourself, by adding:
-
-```
-alias francinette="$HOME"/francinette/tester.sh
-alias paco="$HOME"/francinette/tester.sh
-```
-
-Now it should work. If it does not, don't be afraid to contact me.
 
 ## Acknowledgments
 
