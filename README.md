@@ -5,7 +5,7 @@ If you have little to no experience programming, I highly highly highly recommen
 
 #### I've installed francinette, but when I try to execute it I get the message: `command not found: francinette`
 
-In the install script I try to set two alias to for `francinette`: `francinette` and `paco`. If you are in Linux I do that by adding two lines to the `.bashrc` file. If by some chance you are using other shell, or for some other reason it does not work, You can try to set the aliases yourself, by adding:
+In the install script I try to set two alias to for `francinette`: `francinette` and `paco`. If you are in Linux I do that by adding two lines to the `.bashrc` or `.zshrc` file in your home folder. If by some chance you are using other shell, or for some other reason it does not work, You can try to set the aliases yourself, by adding:
 
 ```
 alias francinette="$HOME"/francinette/tester.sh
